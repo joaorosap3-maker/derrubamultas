@@ -24,7 +24,8 @@ import {
   MapPin,
   Music2,
   Pin,
-  Menu
+  Menu,
+  Smartphone
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState } from 'react';
@@ -67,8 +68,7 @@ export default function App() {
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
-    placa: '',
-    email: ''
+    placa: ''
   });
 
   // Capturar parâmetro de origem da URL
@@ -77,13 +77,11 @@ export default function App() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { nome, placa, email } = formData;
+    const { nome, placa } = formData;
     
-    if (!nome || !placa || !email) return;
+    if (!nome || !placa) return;
 
     const message = `Olá, me chamo ${nome}. Vim pelo ${origem} e gostaria de consultar a multa da placa ${placa}.
-
-Meu e-mail para contato: ${email}
 
 Nossa equipe especializada realiza uma análise técnica completa e verifica todas as possibilidades de recurso, podendo atuar em até 3 instâncias administrativas.
 
@@ -170,8 +168,8 @@ Vamos avaliar sem compromisso.`;
             <Menu className="w-6 h-6 text-[#1F1F1F]" />
           </button>
           
-          {/* Logo - Desktop à esquerda, Mobile centralizada */}
-          <div className="hidden md:block">
+          {/* Logo - Desktop à direita, Mobile centralizada */}
+          <div className="hidden md:block ml-auto">
             <img 
               src="/logo.png" 
               alt="DerrubaMultas" 
@@ -217,6 +215,13 @@ Vamos avaliar sem compromisso.`;
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Por que funciona
+            </a>
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#diferenciais"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Diferenciais
             </a>
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
@@ -269,6 +274,13 @@ Vamos avaliar sem compromisso.`;
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Por que funciona
+                </a>
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#diferenciais"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Diferenciais
                 </a>
                 <a 
                   className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
@@ -363,17 +375,6 @@ Vamos avaliar sem compromisso.`;
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">E-mail</label>
-                      <input 
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-transparent border-b-2 border-outline-variant/20 focus:border-primary-fixed focus:ring-0 px-0 py-3 sm:py-2 transition-all outline-none text-base sm:text-lg" 
-                        placeholder="seu@email.com" 
-                        type="email"
-                      />
-                    </div>
-                    <div>
                       <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Placa do Veículo</label>
                       <input 
                         required
@@ -385,7 +386,7 @@ Vamos avaliar sem compromisso.`;
                       />
                     </div>
                     <button className="w-full bg-[#F4B400] text-black font-bold py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl hover:bg-[#E5A500] transition-all mt-6 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3" type="submit">
-                      <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
+                      <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
                       Vamos Derrubar?
                     </button>
                   </form>
@@ -461,6 +462,110 @@ Vamos avaliar sem compromisso.`;
                   </div>
                 </motion.div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Nosso Processo vs Outros Section */}
+        <section className="py-16 bg-surface" id="diferenciais">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+                Nosso processo <span className="text-primary-fixed">vs</span> outros
+              </h2>
+              <p className="text-on-surface-variant max-w-3xl mx-auto text-base sm:text-lg">
+                A diferença clara entre um serviço especializado e soluções genéricas
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Coluna 1 - Nosso Processo */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-gradient-to-br from-primary-fixed/5 to-primary-fixed/10 p-8 rounded-xl border-2 border-primary-fixed shadow-lg"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-inverse-surface">Nosso processo</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Atendimento inicial personalizado</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Análise completa da situação do cliente</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Definição da melhor estratégia de defesa</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Criação de defesa sob medida</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Protocolo no órgão de trânsito</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Acompanhamento completo do processo</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary-fixed flex-shrink-0 mt-1" />
+                    <p className="text-inverse-surface font-medium">Suporte e orientação após o resultado</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Coluna 2 - Outros */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-surface-container-highest p-8 rounded-xl border-2 border-outline-variant/30 shadow-lg"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-outline-variant rounded-full flex items-center justify-center">
+                    <X className="w-6 h-6 text-on-surface-variant" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-on-surface-variant">Outros</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Atendimento padrão e genérico</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Sem análise aprofundada</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Uso de modelos prontos</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Estratégia padrão para todos os casos</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Pouco ou nenhum acompanhamento</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <X className="w-5 h-5 text-outline-variant flex-shrink-0 mt-1" />
+                    <p className="text-on-surface-variant font-medium">Falta de suporte após envio</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -658,7 +763,7 @@ Vamos avaliar sem compromisso.`;
                 onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
                 className="w-full sm:w-auto bg-[#F4B400] text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#E5A500] hover:scale-105 transition-transform flex items-center justify-center gap-3"
               >
-                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
+                <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
                 Atendimento WhatsApp
               </button>
               <button 
