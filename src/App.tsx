@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState } from 'react';
+import AcompanharProcesso from './AcompanharProcesso';
 
 const faqs = [
   {
@@ -52,6 +53,13 @@ const faqs = [
 ];
 
 export default function App() {
+  // Sistema de roteamento simples
+  const currentPath = window.location.pathname;
+  
+  if (currentPath === '/acompanhar') {
+    return <AcompanharProcesso />;
+  }
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({
@@ -147,20 +155,52 @@ Vamos avaliar sem compromisso.`;
       </AnimatePresence>
 
       {/* Header */}
-      <header className="glass-nav">
-        <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20 gap-x-10">
-          <div className="text-2xl font-black tracking-tighter text-inverse-surface">
-            DerrubaMultas
+      <header className="bg-[#F4B400] shadow-lg">
+        <nav className="flex justify-between items-center max-w-7xl mx-auto px-4 h-20 gap-x-10">
+          {/* Logo e Nome da Empresa */}
+          <div className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="DerrubaMultas" 
+              className="h-10 w-auto object-contain mr-3" 
+            />
+            <span className="text-[#1F1F1F] font-bold text-xl md:text-2xl">
+              Derruba Multas
+            </span>
           </div>
-          <div className="hidden md:flex items-center gap-x-8 font-headline font-bold tracking-tight">
-            <a className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors duration-300" href="#processo">Processo</a>
-            <a className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors duration-300" href="#vantagens">Vantagens</a>
-            <a className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors duration-300" href="#depoimentos">Depoimentos</a>
-            <a className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors duration-300" href="#faq">FAQ</a>
+          
+          {/* Menu de Navegação */}
+          <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight">
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#processo"
+            >
+              Processo
+            </a>
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#vantagens"
+            >
+              Vantagens
+            </a>
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#depoimentos"
+            >
+              Depoimentos
+            </a>
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#faq"
+            >
+              FAQ
+            </a>
           </div>
+          
+          {/* Botão CTA */}
           <button 
             onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-            className="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-lg font-bold hover:bg-primary-fixed-dim active:scale-95 transition-all duration-200"
+            className="bg-[#1F1F1F] text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 active:scale-95 transition-all duration-200"
           >
             Falar com Especialista
           </button>
@@ -471,7 +511,7 @@ Vamos avaliar sem compromisso.`;
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Brand & Social */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="text-2xl font-black mb-6">DerrubaMultas</div>
+            <img src="/logo.png" alt="DerrubaMultas" className="h-12 w-auto object-contain mb-6" />
             <p className="text-outline-variant mb-8 max-w-xs">Especialistas em recursos de multas e suspensão de CNH.</p>
             <div className="flex gap-4">
               <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
