@@ -581,23 +581,23 @@ Vamos avaliar sem compromisso.`;
             <p className="text-black mb-6 sm:mb-8 max-w-xs text-sm sm:text-base">Especialistas em recursos de multas e suspensão de CNH.</p>
             <div className="flex gap-3 sm:gap-4">
               <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-[#25D366]" />
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
               </a>
               <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
-                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-[#25D366]" />
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
               </a>
               <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
-                <Pin className="w-4 h-4 sm:w-5 sm:h-5 text-[#25D366]" />
+                <Pin className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
               </a>
               <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
-                <Music2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#25D366]" />
+                <Music2 className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
               </a>
             </div>
           </div>
 
           {/* Links */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-4 sm:mb-6 text-red-600">Links Úteis</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs mb-4 sm:mb-6 text-black">Links Úteis</h4>
             <div className="flex flex-col gap-3 sm:gap-4 font-sans text-sm sm:text-base">
               <a className="text-black/70 hover:text-black transition-all" href="#processo">Processo</a>
               <a className="text-black/70 hover:text-black transition-all" href="#vantagens">Vantagens</a>
@@ -608,18 +608,18 @@ Vamos avaliar sem compromisso.`;
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-4 sm:mb-6 text-red-600">Contato</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs mb-4 sm:mb-6 text-black">Contato</h4>
             <div className="flex flex-col gap-3 sm:gap-4 font-sans text-sm sm:text-base text-black/70">
               <div className="flex items-center gap-2 sm:gap-3">
-                <Mail className="w-4 h-4 text-[#F4B400]" />
+                <Mail className="w-4 h-4 text-black" />
                 <span className="break-words">derrubamultas2@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <MessageCircle className="w-4 h-4 text-[#F4B400]" />
+                <MessageCircle className="w-4 h-4 text-black" />
                 48 991003589
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <MapPin className="w-4 h-4 text-[#F4B400]" />
+                <MapPin className="w-4 h-4 text-black" />
                 <span className="break-words">Rua José Ferreira, 101 Sala 04 Tubarão SC.</span>
               </div>
             </div>
