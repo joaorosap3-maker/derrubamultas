@@ -23,7 +23,8 @@ import {
   Mail,
   MapPin,
   Music2,
-  Pin
+  Pin,
+  Menu
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState } from 'react';
@@ -62,6 +63,7 @@ export default function App() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
@@ -157,44 +159,111 @@ Vamos avaliar sem compromisso.`;
       {/* Header */}
       <header className="bg-[#F4B400] shadow-lg">
         <nav className="flex items-center justify-between max-w-7xl mx-auto px-4 h-20">
-          {/* Logo */}
-          <img 
-            src="/logo.png" 
-            alt="DerrubaMultas" 
-            className="h-12 w-auto object-contain ml-8" 
-          />
+          {/* Menu Sanduíche - Mobile */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-black/10 transition-colors"
+          >
+            <Menu className="w-6 h-6 text-[#1F1F1F]" />
+          </button>
           
-          {/* Menu de Navegação - Centralizado */}
+          {/* Logo - Desktop à esquerda, Mobile centralizada */}
+          <div className="hidden md:block">
+            <img 
+              src="/logo.png" 
+              alt="DerrubaMultas" 
+              className="h-12 w-auto object-contain" 
+            />
+          </div>
+          
+          {/* Logo Mobile - Centralizada */}
+          <div className="md:hidden absolute left-1/2 transform -translate-x-1/2">
+            <img 
+              src="/logo.png" 
+              alt="DerrubaMultas" 
+              className="h-10 sm:h-12 w-auto object-contain" 
+            />
+          </div>
+          
+          {/* Menu Desktop - Centralizado */}
           <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight flex-1 justify-center">
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#processo"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Processo
             </a>
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#vantagens"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Vantagens
             </a>
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#depoimentos"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Depoimentos
             </a>
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#faq"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </a>
           </div>
           
-          {/* Espaço vazio para equilibrar */}
-          <div className="w-32"></div>
+          {/* Espaço vazio para equilibrar no desktop */}
+          <div className="hidden md:block w-32"></div>
         </nav>
+        
+        {/* Menu Mobile - Overlay */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden bg-[#F4B400] border-t border-black/10"
+            >
+              <div className="px-4 py-6 space-y-4">
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#processo"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Processo
+                </a>
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#vantagens"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Vantagens
+                </a>
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#depoimentos"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Depoimentos
+                </a>
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#faq"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       <main className="mt-0">
