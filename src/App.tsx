@@ -157,17 +157,12 @@ Vamos avaliar sem compromisso.`;
       {/* Header */}
       <header className="bg-[#F4B400] shadow-lg">
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-4 h-20 gap-x-10">
-          {/* Logo e Nome da Empresa */}
-          <div className="flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="DerrubaMultas" 
-              className="h-10 w-auto object-contain mr-3" 
-            />
-            <span className="text-[#1F1F1F] font-bold text-xl md:text-2xl">
-              Derruba Multas
-            </span>
-          </div>
+          {/* Logo */}
+          <img 
+            src="/logo.png" 
+            alt="DerrubaMultas" 
+            className="h-9 w-auto object-contain" 
+          />
           
           {/* Menu de Navegação */}
           <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight">
