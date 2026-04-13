@@ -67,7 +67,8 @@ export default function App() {
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
-    placa: ''
+    placa: '',
+    email: ''
   });
 
   // Capturar parâmetro de origem da URL
@@ -76,11 +77,13 @@ export default function App() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { nome, placa } = formData;
+    const { nome, placa, email } = formData;
     
-    if (!nome || !placa) return;
+    if (!nome || !placa || !email) return;
 
     const message = `Olá, me chamo ${nome}. Vim pelo ${origem} e gostaria de consultar a multa da placa ${placa}.
+
+Meu e-mail para contato: ${email}
 
 Nossa equipe especializada realiza uma análise técnica completa e verifica todas as possibilidades de recurso, podendo atuar em até 3 instâncias administrativas.
 
@@ -172,7 +175,7 @@ Vamos avaliar sem compromisso.`;
             <img 
               src="/logo.png" 
               alt="DerrubaMultas" 
-              className="h-12 w-auto object-contain" 
+              className="h-16 w-auto object-contain" 
             />
           </div>
           
@@ -301,7 +304,7 @@ Vamos avaliar sem compromisso.`;
               >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] sm:leading-[1.2] font-extrabold tracking-tight mb-6 lg:mb-8">
                   Você vai pagar... <br/>
-                  <span className="text-[#25D366]">ou vai derrubar?</span>
+                  <span className="text-[#F4B400]">ou vai derrubar?</span>
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl text-outline-variant max-w-none lg:max-w-xl mb-8 lg:mb-12 font-medium leading-relaxed">
                   A Derruba Multas entra pra ganhar.<br/><br/>
@@ -360,6 +363,17 @@ Vamos avaliar sem compromisso.`;
                       />
                     </div>
                     <div>
+                      <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">E-mail</label>
+                      <input 
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full bg-transparent border-b-2 border-outline-variant/20 focus:border-primary-fixed focus:ring-0 px-0 py-3 sm:py-2 transition-all outline-none text-base sm:text-lg" 
+                        placeholder="seu@email.com" 
+                        type="email"
+                      />
+                    </div>
+                    <div>
                       <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Placa do Veículo</label>
                       <input 
                         required
@@ -370,7 +384,8 @@ Vamos avaliar sem compromisso.`;
                         type="text"
                       />
                     </div>
-                    <button className="w-full bg-[#25D366] text-white font-bold py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl hover:bg-[#128C7E] transition-all mt-6 transform hover:scale-105 active:scale-95" type="submit">
+                    <button className="w-full bg-[#F4B400] text-black font-bold py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl hover:bg-[#E5A500] transition-all mt-6 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3" type="submit">
+                      <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
                       Vamos Derrubar?
                     </button>
                   </form>
@@ -641,15 +656,16 @@ Vamos avaliar sem compromisso.`;
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
               <button 
                 onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-                className="w-full sm:w-auto bg-[#25D366] text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#128C7E] hover:scale-105 transition-transform flex items-center justify-center gap-3"
+                className="w-full sm:w-auto bg-[#F4B400] text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#E5A500] hover:scale-105 transition-transform flex items-center justify-center gap-3"
               >
-                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" /> Atendimento WhatsApp
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
+                Atendimento WhatsApp
               </button>
               <button 
-                onClick={() => window.open('tel:+554891003589', '_self')}
+                onClick={() => window.open('mailto:derrubamultas2@gmail.com', '_blank')}
                 className="w-full sm:w-auto bg-surface text-inverse-surface px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-3"
               >
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> Ligar agora
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> E-mail
               </button>
             </div>
           </div>
@@ -657,7 +673,7 @@ Vamos avaliar sem compromisso.`;
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#dfdcdc] w-full py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-400 text-black">
+      <footer className="bg-[#F4B400] w-full py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-black text-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
           {/* Brand & Social */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left md:col-span-1">
