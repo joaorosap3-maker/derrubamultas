@@ -25,7 +25,8 @@ import {
   Music2,
   Pin,
   Menu,
-  Smartphone
+  Smartphone,
+  PhoneCall
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState } from 'react';
@@ -189,42 +190,42 @@ Vamos avaliar sem compromisso.`;
           {/* Menu Desktop - Centralizado */}
           <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight flex-1 justify-center">
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#processo"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Processo
             </a>
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#vantagens"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Vantagens
             </a>
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#depoimentos"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Depoimentos
             </a>
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#por-que-funciona"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Por que funciona
             </a>
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#diferenciais"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Diferenciais
             </a>
             <a 
-              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              className="text-black hover:text-white transition-colors duration-300" 
               href="#faq"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -248,42 +249,42 @@ Vamos avaliar sem compromisso.`;
             >
               <div className="px-4 py-6 space-y-4">
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#processo"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Processo
                 </a>
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#vantagens"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Vantagens
                 </a>
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#depoimentos"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Depoimentos
                 </a>
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#por-que-funciona"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Por que funciona
                 </a>
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#diferenciais"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Diferenciais
                 </a>
                 <a 
-                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  className="block text-black hover:text-white hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
                   href="#faq"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -385,8 +386,8 @@ Vamos avaliar sem compromisso.`;
                         type="text"
                       />
                     </div>
-                    <button className="w-full bg-[#F4B400] text-black font-bold py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl hover:bg-[#E5A500] transition-all mt-6 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3" type="submit">
-                      <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
+                    <button className="w-full bg-[#ffd709] text-black font-bold py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl hover:bg-[#e6c400] transition-all mt-6 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3" type="submit">
+                      <PhoneCall className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
                       Vamos Derrubar?
                     </button>
                   </form>
@@ -662,10 +663,10 @@ Vamos avaliar sem compromisso.`;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 onClick={() => window.open('https://wa.me/5548991003589?text=Ol%C3%A1%21+Vi+a+se%C3%A7%C3%A3o+de+diferenciais+e+gostaria+de+falar+com+um+especialista+sobre+minha+multa.', '_blank')}
-                className="bg-[#F4B400] text-black font-bold py-4 px-8 rounded-xl text-lg sm:text-xl hover:bg-[#E5A500] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 mx-auto w-full sm:w-auto shadow-lg"
+                className="bg-[#ffd709] text-black font-bold py-4 px-8 rounded-xl text-lg sm:text-xl hover:bg-[#e6c400] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 mx-auto w-full sm:w-auto shadow-lg"
                 aria-label="Falar com especialista pelo WhatsApp"
               >
-                <Smartphone className="w-6 h-6" />
+                <PhoneCall className="w-6 h-6 text-green-600" />
                 Falar com especialista agora
               </motion.button>
             </div>
@@ -777,9 +778,9 @@ Vamos avaliar sem compromisso.`;
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
               <button 
                 onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-                className="w-full sm:w-auto bg-[#F4B400] text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#E5A500] hover:scale-105 transition-transform flex items-center justify-center gap-3"
+                className="w-full sm:w-auto bg-[#ffd709] text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#e6c400] hover:scale-105 transition-transform flex items-center justify-center gap-3"
               >
-                <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
+                <PhoneCall className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
                 Atendimento WhatsApp
               </button>
               <button 
