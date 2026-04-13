@@ -210,6 +210,13 @@ Vamos avaliar sem compromisso.`;
             </a>
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
+              href="#por-que-funciona"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Por que funciona
+            </a>
+            <a 
+              className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#faq"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -252,6 +259,13 @@ Vamos avaliar sem compromisso.`;
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Depoimentos
+                </a>
+                <a 
+                  className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
+                  href="#por-que-funciona"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Por que funciona
                 </a>
                 <a 
                   className="block text-[#1F1F1F] hover:bg-black/10 py-3 px-4 rounded-lg transition-colors font-semibold"
@@ -362,6 +376,76 @@ Vamos avaliar sem compromisso.`;
                   </form>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Por que funciona Section */}
+        <section className="py-12 md:py-16 lg:py-20 bg-surface-container-lowest scroll-mt-20" id="por-que-funciona" style={{ scrollMarginTop: '80px' }}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+              {/* Imagem - Mobile em cima, Desktop ao lado */}
+              <div className="w-full lg:w-1/2 order-1 lg:order-1">
+                <div className="relative rounded-xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Fiscalização de trânsito e multas"
+                    className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+              </div>
+
+              {/* Conteúdo - Mobile embaixo, Desktop ao lado */}
+              <div className="w-full lg:w-1/2 order-2 lg:order-2">
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="space-y-6"
+                >
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-inverse-surface">
+                    Por que <span className="text-primary-fixed">funciona</span>
+                  </h2>
+
+                  <div className="space-y-4 text-on-surface text-base sm:text-lg leading-relaxed">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary-fixed/10 rounded-full flex items-center justify-center mt-1">
+                        <Search className="w-4 h-4 text-primary-fixed" />
+                      </div>
+                      <p>
+                        <strong>Para que uma multa tenha validade,</strong> o agente de trânsito deve seguir uma "receita" rigorosa prevista no Manual Brasileiro de Fiscalização.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary-fixed/10 rounded-full flex items-center justify-center mt-1">
+                        <X className="w-4 h-4 text-primary-fixed" />
+                      </div>
+                      <p>
+                        <strong>Se qualquer etapa dessa regra for descumprida,</strong> a multa é nula e deve ser cancelada.
+                      </p>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-primary-fixed/10 rounded-full flex items-center justify-center mt-1">
+                        <CheckCircle2 className="w-4 h-4 text-primary-fixed" />
+                      </div>
+                      <p>
+                        <strong>Nosso diferencial:</strong> somos especialistas em identificar esses erros invisíveis para condutores comuns. É por isso que cancelamos 90 em cada 100 multas que assumimos.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <div className="inline-flex items-center gap-2 bg-primary-fixed/10 px-4 py-2 rounded-full">
+                      <Zap className="w-5 h-5 text-primary-fixed" />
+                      <span className="text-primary-fixed font-bold text-sm">90% de sucesso</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </section>

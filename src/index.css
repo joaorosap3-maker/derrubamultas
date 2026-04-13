@@ -36,3 +36,13 @@
 .glass-nav {
   @apply fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl;
 }
+
+/* Scroll suave para links âncora */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para scroll margin em todas as seções */
+section[id] {
+  scroll-margin-top: 80px;
+}
