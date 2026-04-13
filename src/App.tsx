@@ -156,7 +156,7 @@ Vamos avaliar sem compromisso.`;
 
       {/* Header */}
       <header className="bg-[#F4B400] shadow-lg">
-        <nav className="flex justify-between items-center max-w-7xl mx-auto px-4 h-20 gap-x-10">
+        <nav className="flex items-center justify-between max-w-7xl mx-auto px-4 h-20">
           {/* Logo */}
           <img 
             src="/logo.png" 
@@ -164,8 +164,8 @@ Vamos avaliar sem compromisso.`;
             className="h-12 w-auto object-contain ml-8" 
           />
           
-          {/* Menu de Navegação */}
-          <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight">
+          {/* Menu de Navegação - Centralizado */}
+          <div className="hidden md:flex items-center gap-x-8 font-headline font-semibold tracking-tight flex-1 justify-center">
             <a 
               className="text-[#1F1F1F] hover:opacity-70 transition-opacity duration-300" 
               href="#processo"
@@ -192,13 +192,8 @@ Vamos avaliar sem compromisso.`;
             </a>
           </div>
           
-          {/* Botão CTA */}
-          <button 
-            onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-            className="bg-[#25D366] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#128C7E] active:scale-95 transition-all duration-200"
-          >
-            Falar com Especialista
-          </button>
+          {/* Espaço vazio para equilibrar */}
+          <div className="w-32"></div>
         </nav>
       </header>
 
