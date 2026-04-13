@@ -466,6 +466,93 @@ Vamos avaliar sem compromisso.`;
           </div>
         </section>
 
+        
+        {/* Services Section (Bento Grid) */}
+        <section className="py-16 md:py-24 lg:py-32 bg-surface" id="processo">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 md:mb-16 lg:mb-20 text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+                Serviços <span className="text-primary-fixed bg-inverse-surface px-2">Especializados</span>
+              </h2>
+              <p className="text-on-surface-variant max-w-2xl mx-auto text-base sm:text-lg">Soluções jurídicas e administrativas completas para manter sua regularidade no trânsito.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="md:col-span-2 lg:col-span-2 bg-surface-container-low p-6 sm:p-8 lg:p-12 rounded-xl flex flex-col justify-between border-l-4 border-primary-fixed"
+              >
+                <div>
+                  <Gavel className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mb-4 sm:mb-6" />
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Recurso de Multas</h3>
+                  <p className="text-on-surface-variant max-w-none lg:max-w-md leading-relaxed text-sm sm:text-base">Defesa técnica contra infrações indevidas em até 3 instâncias administrativas (Defesa Prévia, JARI e CETRAN). Atuamos desde a análise inicial até a última fase do processo, identificando erros formais e fundamentos legais para aumentar suas chances de sucesso.</p>
+                </div>
+                <div 
+                  onClick={() => setIsModalOpen(true)}
+                  className="mt-6 sm:mt-8 lg:mt-12 flex items-center text-inverse-surface font-bold gap-2 cursor-pointer group text-sm sm:text-base"
+                >
+                  Saber mais <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
+                </div>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-inverse-surface text-surface p-6 sm:p-8 lg:p-12 rounded-xl"
+              >
+                <IdCard className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Suspensão CNH</h3>
+                <p className="text-outline-variant leading-relaxed text-sm sm:text-base">Evite a perda definitiva do seu direito de dirigir por excesso de pontos ou bafômetro.</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-surface-container-highest p-6 sm:p-8 lg:p-12 rounded-xl"
+              >
+                <Search className="w-10 h-10 sm:w-12 sm:h-12 text-inverse-surface mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Indicação de Condutor</h3>
+                <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Assessoria para transferência correta de pontuação fora do prazo regulamentar.</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-surface-container-low p-6 sm:p-8 lg:p-12 rounded-xl"
+              >
+                <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-inverse-surface mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Assessoria Administrativa</h3>
+                <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Gestão completa de processos e documentos junto ao DETRAN.</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-primary-fixed p-6 sm:p-8 lg:p-12 rounded-xl text-on-primary-fixed"
+              >
+                <ShieldCheck className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-6" />
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Certificado Digital</h3>
+                <p className="text-on-primary-fixed leading-relaxed text-sm sm:text-base">Emissão de e-CPF e e-CNPJ para facilitar seus trâmites digitais.</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 md:py-24 lg:py-32 bg-surface-container-lowest" id="vantagens">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
+              <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
+              <h3 className="text-xl sm:text-2xl font-bold">Atendimento Rápido</h3>
+              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Sabemos que multas têm prazos fatais. Nossa equipe responde sua primeira consulta em minutos para não perder tempo.</p>
+            </div>
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
+              <GraduationCap className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
+              <h3 className="text-xl sm:text-2xl font-bold">Especialistas</h3>
+              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Diferente de escritórios genéricos, somos focados exclusivamente em Direito de Trânsito com alta taxa de sucesso.</p>
+            </div>
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
+              <Eye className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
+              <h3 className="text-xl sm:text-2xl font-bold">Transparência</h3>
+              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Acompanhe cada etapa do seu processo com clareza. Sem falsas promessas, apenas resultados reais baseados na lei.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Nosso Processo vs Outros Section */}
         <section className="py-16 bg-surface" id="diferenciais">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -567,91 +654,20 @@ Vamos avaliar sem compromisso.`;
                 </div>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Services Section (Bento Grid) */}
-        <section className="py-16 md:py-24 lg:py-32 bg-surface" id="processo">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 md:mb-16 lg:mb-20 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-                Serviços <span className="text-primary-fixed bg-inverse-surface px-2">Especializados</span>
-              </h2>
-              <p className="text-on-surface-variant max-w-2xl mx-auto text-base sm:text-lg">Soluções jurídicas e administrativas completas para manter sua regularidade no trânsito.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="md:col-span-2 lg:col-span-2 bg-surface-container-low p-6 sm:p-8 lg:p-12 rounded-xl flex flex-col justify-between border-l-4 border-primary-fixed"
+            
+            {/* Botão WhatsApp CTA */}
+            <div className="mt-12 text-center">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                onClick={() => window.open('https://wa.me/5548991003589?text=Ol%C3%A1%21+Vi+a+se%C3%A7%C3%A3o+de+diferenciais+e+gostaria+de+falar+com+um+especialista+sobre+minha+multa.', '_blank')}
+                className="bg-[#F4B400] text-black font-bold py-4 px-8 rounded-xl text-lg sm:text-xl hover:bg-[#E5A500] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 mx-auto w-full sm:w-auto shadow-lg"
+                aria-label="Falar com especialista pelo WhatsApp"
               >
-                <div>
-                  <Gavel className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mb-4 sm:mb-6" />
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Recurso de Multas</h3>
-                  <p className="text-on-surface-variant max-w-none lg:max-w-md leading-relaxed text-sm sm:text-base">Defesa técnica contra infrações indevidas em até 3 instâncias administrativas (Defesa Prévia, JARI e CETRAN). Atuamos desde a análise inicial até a última fase do processo, identificando erros formais e fundamentos legais para aumentar suas chances de sucesso.</p>
-                </div>
-                <div 
-                  onClick={() => setIsModalOpen(true)}
-                  className="mt-6 sm:mt-8 lg:mt-12 flex items-center text-inverse-surface font-bold gap-2 cursor-pointer group text-sm sm:text-base"
-                >
-                  Saber mais <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
-                </div>
-              </motion.div>
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-inverse-surface text-surface p-6 sm:p-8 lg:p-12 rounded-xl"
-              >
-                <IdCard className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Suspensão CNH</h3>
-                <p className="text-outline-variant leading-relaxed text-sm sm:text-base">Evite a perda definitiva do seu direito de dirigir por excesso de pontos ou bafômetro.</p>
-              </motion.div>
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-container-highest p-6 sm:p-8 lg:p-12 rounded-xl"
-              >
-                <Search className="w-10 h-10 sm:w-12 sm:h-12 text-inverse-surface mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Indicação de Condutor</h3>
-                <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Assessoria para transferência correta de pontuação fora do prazo regulamentar.</p>
-              </motion.div>
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-surface-container-low p-6 sm:p-8 lg:p-12 rounded-xl"
-              >
-                <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-inverse-surface mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Assessoria Administrativa</h3>
-                <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Gestão completa de processos e documentos junto ao DETRAN.</p>
-              </motion.div>
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="bg-primary-fixed p-6 sm:p-8 lg:p-12 rounded-xl text-on-primary-fixed"
-              >
-                <ShieldCheck className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-6" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Certificado Digital</h3>
-                <p className="text-on-primary-fixed leading-relaxed text-sm sm:text-base">Emissão de e-CPF e e-CNPJ para facilitar seus trâmites digitais.</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 md:py-24 lg:py-32 bg-surface-container-lowest" id="vantagens">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
-              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
-              <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
-              <h3 className="text-xl sm:text-2xl font-bold">Atendimento Rápido</h3>
-              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Sabemos que multas têm prazos fatais. Nossa equipe responde sua primeira consulta em minutos para não perder tempo.</p>
-            </div>
-            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
-              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
-              <GraduationCap className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
-              <h3 className="text-xl sm:text-2xl font-bold">Especialistas</h3>
-              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Diferente de escritórios genéricos, somos focados exclusivamente em Direito de Trânsito com alta taxa de sucesso.</p>
-            </div>
-            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
-              <div className="w-12 h-1 sm:w-16 bg-primary-fixed mx-auto md:mx-0"></div>
-              <Eye className="w-10 h-10 sm:w-12 sm:h-12 text-primary-fixed-dim mx-auto md:mx-0" />
-              <h3 className="text-xl sm:text-2xl font-bold">Transparência</h3>
-              <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">Acompanhe cada etapa do seu processo com clareza. Sem falsas promessas, apenas resultados reais baseados na lei.</p>
+                <Smartphone className="w-6 h-6" />
+                Falar com especialista agora
+              </motion.button>
             </div>
           </div>
         </section>
