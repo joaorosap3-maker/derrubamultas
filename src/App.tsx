@@ -161,7 +161,7 @@ Vamos avaliar sem compromisso.`;
           <img 
             src="/logo.png" 
             alt="DerrubaMultas" 
-            className="h-9 w-auto object-contain" 
+            className="h-12 w-auto object-contain ml-8" 
           />
           
           {/* Menu de Navegação */}
@@ -195,14 +195,14 @@ Vamos avaliar sem compromisso.`;
           {/* Botão CTA */}
           <button 
             onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-            className="bg-[#1F1F1F] text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 active:scale-95 transition-all duration-200"
+            className="bg-[#25D366] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#128C7E] active:scale-95 transition-all duration-200"
           >
             Falar com Especialista
           </button>
         </nav>
       </header>
 
-      <main className="mt-20">
+      <main className="mt-0">
         {/* Hero Section */}
         <section className="relative min-h-[800px] flex items-center bg-inverse-surface text-surface overflow-hidden">
           <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -221,11 +221,15 @@ Vamos avaliar sem compromisso.`;
               className="lg:col-span-7 flex flex-col justify-center"
             >
               <h1 className="text-[3.5rem] leading-[1.1] font-extrabold tracking-tight mb-6">
-                Recupere seu <br/>
-                <span className="text-primary-fixed">Direito de Dirigir</span>
+                Você vai pagar... <br/>
+                <span className="text-[#25D366]">ou vai derrubar?</span>
               </h1>
               <p className="text-xl text-outline-variant max-w-xl mb-12 font-medium">
-                Especialistas em recursos de multas e suspensão de CNH. Defesa administrativa técnica para garantir sua liberdade de locomoção.
+                A Derruba Multas entra pra ganhar.<br/><br/>
+                Grande parte das multas tem erro - e é nisso que a gente trabalha. Cancelamos penalidades de bafômetro, suspensão, cassação e provisória antes que você perca sua CNH.<br/><br/>
+                Avaliação gratuita no WhatsApp.<br/>
+                Especialistas prontos pra agir agora.<br/>
+                Defesa completa até o fim.
               </p>
               <div className="flex gap-4 items-center">
                 <div className="flex -space-x-4">
@@ -287,8 +291,8 @@ Vamos avaliar sem compromisso.`;
                       type="text"
                     />
                   </div>
-                  <button className="w-full bg-primary-fixed text-on-primary-fixed font-bold py-5 rounded-lg text-lg hover:bg-primary-fixed-dim transition-all mt-4" type="submit">
-                    Consultar Agora
+                  <button className="w-full bg-[#25D366] text-white font-bold py-5 rounded-lg text-lg hover:bg-[#128C7E] transition-all mt-4" type="submit">
+                    Vamos Derrubar?
                   </button>
                 </form>
               </div>
@@ -486,12 +490,12 @@ Vamos avaliar sem compromisso.`;
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
-                className="bg-primary-fixed text-on-primary-fixed px-10 py-5 rounded-lg text-xl font-bold hover:scale-105 transition-transform flex items-center gap-3"
+                className="bg-[#25D366] text-white px-10 py-5 rounded-lg text-xl font-bold hover:bg-[#128C7E] hover:scale-105 transition-transform flex items-center gap-3"
               >
                 <MessageCircle className="w-6 h-6" /> Atendimento WhatsApp
               </button>
               <button 
-                onClick={() => window.location.href = 'tel:48991003589'}
+                onClick={() => window.open('tel:+554891003589', '_self')}
                 className="bg-surface text-inverse-surface px-10 py-5 rounded-lg text-xl font-bold hover:bg-surface-container-highest transition-colors flex items-center gap-3"
               >
                 <Phone className="w-6 h-6" /> Ligar agora
@@ -502,59 +506,59 @@ Vamos avaliar sem compromisso.`;
       </main>
 
       {/* Footer */}
-      <footer className="bg-inverse-surface w-full py-24 px-8 border-t border-outline-variant/10 text-surface">
+      <footer className="bg-[#dfdcdc] w-full py-24 px-8 border-t border-gray-400 text-black">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Brand & Social */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <img src="/logo.png" alt="DerrubaMultas" className="h-12 w-auto object-contain mb-6" />
-            <p className="text-outline-variant mb-8 max-w-xs">Especialistas em recursos de multas e suspensão de CNH.</p>
+            <p className="text-black mb-8 max-w-xs">Especialistas em recursos de multas e suspensão de CNH.</p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
-                <Facebook className="w-5 h-5" />
+              <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
+                <Facebook className="w-5 h-5 text-[#25D366]" />
               </a>
-              <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
-                <Instagram className="w-5 h-5" />
+              <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
+                <Instagram className="w-5 h-5 text-[#25D366]" />
               </a>
-              <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
-                <Pin className="w-5 h-5" />
+              <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
+                <Pin className="w-5 h-5 text-[#25D366]" />
               </a>
-              <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
-                <Music2 className="w-5 h-5" />
+              <a href="#" className="p-2 bg-black/10 rounded-full hover:bg-black/20 transition-all">
+                <Music2 className="w-5 h-5 text-[#25D366]" />
               </a>
             </div>
           </div>
 
           {/* Links */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-primary-fixed">Links Úteis</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-red-600">Links Úteis</h4>
             <div className="flex flex-col gap-4 font-sans text-sm">
-              <a className="text-outline-variant hover:text-surface transition-all" href="#processo">Processo</a>
-              <a className="text-outline-variant hover:text-surface transition-all" href="#vantagens">Vantagens</a>
-              <a className="text-outline-variant hover:text-surface transition-all" href="#depoimentos">Depoimentos</a>
-              <a className="text-outline-variant hover:text-surface transition-all" href="#faq">FAQ</a>
+              <a className="text-black/70 hover:text-black transition-all" href="#processo">Processo</a>
+              <a className="text-black/70 hover:text-black transition-all" href="#vantagens">Vantagens</a>
+              <a className="text-black/70 hover:text-black transition-all" href="#depoimentos">Depoimentos</a>
+              <a className="text-black/70 hover:text-black transition-all" href="#faq">FAQ</a>
             </div>
           </div>
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-primary-fixed">Contato</h4>
-            <div className="flex flex-col gap-4 font-sans text-sm text-outline-variant">
+            <h4 className="font-bold uppercase tracking-widest text-xs mb-6 text-red-600">Contato</h4>
+            <div className="flex flex-col gap-4 font-sans text-sm text-black/70">
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary-fixed" />
+                <Mail className="w-4 h-4 text-[#F4B400]" />
                 derrubamultas2@gmail.com
               </div>
               <div className="flex items-center gap-3">
-                <MessageCircle className="w-4 h-4 text-primary-fixed" />
+                <MessageCircle className="w-4 h-4 text-[#F4B400]" />
                 48 991003589
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-primary-fixed" />
+                <MapPin className="w-4 h-4 text-[#F4B400]" />
                 Rua José Ferreira, 101 Sala 04 Tubarão SC.
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-outline-variant/10 text-center text-outline-variant text-xs opacity-60">
+        <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-gray-400 text-center text-black/60 text-xs">
           © 2024 DerrubaMultas. Todos os direitos reservados.
         </div>
       </footer>
