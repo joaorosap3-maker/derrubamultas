@@ -93,7 +93,7 @@ Para darmos continuidade, envie a notificação da multa ou mais detalhes do seu
 Vamos avaliar sem compromisso.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/5548991003589?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5548991552528?text=${encodedMessage}`;
     
     window.open(whatsappUrl, '_blank');
   };
@@ -662,7 +662,7 @@ Vamos avaliar sem compromisso.`;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                onClick={() => window.open('https://wa.me/5548991003589?text=Ol%C3%A1%21+Vi+a+se%C3%A7%C3%A3o+de+diferenciais+e+gostaria+de+falar+com+um+especialista+sobre+minha+multa.', '_blank')}
+                onClick={() => window.open('https://wa.me/5548991552528?text=Ol%C3%A1%21+Vi+a+se%C3%A7%C3%A3o+de+diferenciais+e+gostaria+de+falar+com+um+especialista+sobre+minha+multa.', '_blank')}
                 className="bg-[#ffd709] text-black font-bold py-4 px-8 rounded-xl text-lg sm:text-xl hover:bg-[#e6c400] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 mx-auto w-full sm:w-auto shadow-lg"
                 aria-label="Falar com especialista pelo WhatsApp"
               >
@@ -777,7 +777,7 @@ Vamos avaliar sem compromisso.`;
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
               <button 
-                onClick={() => window.open('https://wa.me/5548991003589', '_blank')}
+                onClick={() => window.open('https://wa.me/5548991552528', '_blank')}
                 className="w-full sm:w-auto bg-[#ffd709] text-black px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold hover:bg-[#e6c400] hover:scale-105 transition-transform flex items-center justify-center gap-3"
               >
                 <PhoneCall className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
@@ -838,7 +838,7 @@ Vamos avaliar sem compromisso.`;
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <MessageCircle className="w-4 h-4 text-black" />
-                48 991003589
+                48 991552528
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <MapPin className="w-4 h-4 text-black" />
